@@ -1,16 +1,15 @@
 
-import React, { useState } from 'react';
+import React, { Ref, RefObject, useEffect, useRef, useState, Component } from 'react';
 import "./style.css"
 
-type Message = {
-    name: string,
+type ItemsProps = {
+    name:string
 }
 
-export default function Test(props : Message) {
-
+export default function Test(props : ItemsProps) {
     return (
         <>
-            <h1>hello {props.name}</h1>
+                <h1>{props.name}</h1>
         </>
     )
 }
