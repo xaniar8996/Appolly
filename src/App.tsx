@@ -8,12 +8,12 @@ export default function App() {
 
     const Login = lazy(() => import("./Pages/Login"));
     const NavPage = lazy(() => import("./Pages/NavPage"));
-    
+
     const Loading = () => {
         return (
             <div
                 style={{
-                    marginTop: "270px",
+                    marginTop: "300px",
                     marginLeft: "730px"
                 }}
             >

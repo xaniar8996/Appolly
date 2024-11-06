@@ -1,53 +1,111 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    .main-section{
-        width: 100%;
-        height: 721px;
-        background-image: url(../images/Background\ Image.png);
-        border-radius: 20px;
-    }
-    
-    .top-infos{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 870px;
-        position: absolute;
-        margin-left: 80px;
-        margin-top: 12px;
-        color: white;
-    }
 
-    .first-top-infos{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-    }
+.main-section {
+    width: 100%;
+    height: 721px;
+    background-image: url(../images/Background\ Image.png);
+    border-radius: 20px;
+}
 
-    .social-media{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;   
-    }
+.top-infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 870px;
+    position: absolute;
+    margin-left: 80px;
+    margin-top: 12px;
+    color: white;
+}
 
-    .email::before{
-        content: url(../Icons/envelope-solid-24.png);
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;  
-    }
+.first-top-infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
 
-    .number::before{
-        content: url(../Icons/phone-solid-24.png);
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;  
-    }
+.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.email::before {
+    content: url(../Icons/envelope-solid-24.png);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.number::before {
+    content: url(../Icons/phone-solid-24.png);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.first-toolbar button:hover {
+    background-color: rgb(80, 80, 241);
+    color: wheat;
+    transition: 0.2s ease;
+}
+
+
+.secend-toolbar button:hover {
+    background-color: rgb(80, 80, 241);
+    color: wheat;
+    transition: 0.2s ease;
+}
+
+.hero{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 250px;
+    margin-top: 160px;
+    position: absolute;
+    margin-left: 250px;
+}
+
+.mobile-pic-hero img {
+    width: 270px;
+    height: 550px;
+
+}
+
+.hero-text{
+    width: 430px;
+    height: 330px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px #ffffff;
+    padding: 24px;
+}
+
+.Btn-download-app{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 17px;
+}
+
+.Btn-download-app button:hover{
+    box-shadow: 0px 0px 20px #000000;
+    transform: translateY(-5px);
+    transition: 0.2s ease;
+}
