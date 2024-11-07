@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import Cookies from "js-cookie";
 import { CircularProgress, Typography, AppBar, Toolbar, IconButton, Button, ButtonGroup, Skeleton } from "@mui/material";
 import { Facebook, Instagram, Twitter, YouTube } from "@mui/icons-material"
@@ -11,45 +11,26 @@ import "../assetss/Style/NavPage.css";
 // image
 import Logo from "../assetss/images/Logo4 1.png";
 import Mobile from "../assetss/images/Free Ui View Mobile App Mockup 1.png";
+import { Route, Routes, useNavigate } from "react-router-dom";
 
 
 export default function NavPage() {
 
+    const Home = lazy(() => import("./Nav-Pages/Home"));
+    const AboutUs = lazy(() => import("./Nav-Pages/About-Us"));
+
+    // Navigate
+    const Navigate = useNavigate();
 
     return (
         <>
             <div className="main-section">
-                {/* Top infos */}
-                <div className="top-infos">
-                    <div className="first-top-infos">
-                        <Typography variant="body2" className="email">
-                            x655454@Gmail.com
-                        </Typography>
-                        <Typography variant="body2" className="number">
-                            (+98) 9155865509
-                        </Typography>
-                    </div>
-                    <div className="social-media">
-                        <IconButton>
-                            <Facebook sx={{ color: "white", fontSize: "20px" }} />
-                        </IconButton>
-                        <IconButton>
-                            <Instagram sx={{ color: "white", fontSize: "20px" }} />
-                        </IconButton>
-                        <IconButton>
-                            <Twitter sx={{ color: "white", fontSize: "20px" }} />
-                        </IconButton>
-                        <IconButton>
-                            <YouTube sx={{ color: "white", fontSize: "20px" }} />
-                        </IconButton>
-                    </div>
-                </div>
                 {/* Nav */}
                 <AppBar
                     sx={{
                         width: "90%",
                         mr: 9,
-                        mt: 11,
+                        mt: 4,
                         borderRadius: "6px",
                         display: "flex",
                         flexDirection: "row",
@@ -70,10 +51,18 @@ export default function NavPage() {
                             ml: 15
                         }}
                     >
-                        <Button variant="text" sx={{ color: "black", fontSize: "18px" }}>
+                        <Button
+                            variant="text"
+                            sx={{ color: "black", fontSize: "18px" }}
+                            onClick={() => Navigate("/Home")}
+                        >
                             Home
                         </Button>
-                        <Button variant="text" sx={{ color: "black", fontSize: "18px" }}>
+                        <Button 
+                        variant="text" 
+                        sx={{ color: "black", fontSize: "18px" }}
+                        onClick={() => Navigate("/About-Us")}
+                        >
                             About
                         </Button>
                         <Button variant="text" sx={{ color: "black", fontSize: "18px" }}>
@@ -104,56 +93,46 @@ export default function NavPage() {
                         </Button>
                     </Toolbar>
                 </AppBar>
-                <div className="hero">
-                    <div className="mobile-pic-hero">
-                        <img src={Mobile} />
-                    </div>
-                    <div className="hero-text">
-                        <Typography
-                            variant="h3"
-                            sx={{
-                                fontFamily: "fantasy",
-                                wordSpacing: "12px",
-                                color: "#5957e9",
-                            }}
-                        >
-                            A Great App Makes <br />
-                            Your Life Better
-                        </Typography>
-                        <Typography variant="body1" sx={{ color: "gray", mt: 2 }}>
-                            In this App , We show you , your Bank account balance <br />
-                            and everything you spend during day .
-                        </Typography>
-                        <Typography variant="h4" sx={{ mt: 6, fontWeight: "bold" }}>
-                            Download App Now
-                        </Typography>
-                        <div className="Btn-download-app">
-                            <Button
-                                startIcon={<SportsEsportsIcon />}
-                                sx={{
-                                    backgroundColor: "black",
-                                    color: "white",
-                                    fontSize: "17px",
-                                     width: "180px"
-                                }}
-                            >
-                                Google Play
-                            </Button>
-                            <Button
-                                startIcon={<AppleIcon />}
-                                sx={{
-                                    backgroundColor: "black",
-                                    color: "white",
-                                    fontSize: "17px",
-                                    width: "180px"
-                                }}
-                            >
-                                App Store
-                            </Button>
-                        </div>
-                    </div>
-                </div>
             </div>
+            <Routes>
+                <Route
+                    path="*"
+                    element={
+                        <Suspense fallback={<Loading />}>
+                            <Home />
+                        </Suspense>
+                    }
+                />
+                <Route
+                    path="/Home"
+                    element={
+                        <Suspense fallback={<Loading />}>
+                            <Home />
+                        </Suspense>
+                    }
+                />
+                <Route
+                    path="/About-Us"
+                    element={
+                        <Suspense fallback={<Loading />}>
+                            <AboutUs />
+                        </Suspense>
+                    }
+                />
+            </Routes>
         </>
+    )
+}
+
+const Loading = () => {
+    return (
+        <div
+            style={{
+                marginTop: "300px",
+                marginLeft: "730px"
+            }}
+        >
+            <CircularProgress sx={{ color: "black" }} />
+        </div>
     )
 }
