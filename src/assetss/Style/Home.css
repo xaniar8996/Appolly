@@ -1,26 +1,29 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    .hero{
-        width: 1520px;
-        height: 743px;
-        background-image: url(../images/Background\ Image.png);
-        border-radius: 0px 0px 20px 20px ;
-        margin-left: -9px;
-        margin-top: -10px;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: center;
-        align-items: center;
-        gap: 250px;
-    }
+.hero {
+    width: 1520px;
+    height: 743px;
+    background-image: url(../images/Background\ Image.png);
+    border-radius: 0px 0px 20px 20px;
+    margin-left: -9px;
+    margin-top: -10px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 250px;
+}
 
-    .mobile-pic-hero img {
-        width: 270px;
-        height: 550px;
+.mobile-pic-hero img {
+    width: 270px;
+    height: 550px;
 
-    }
+}
 
-    
-.hero-text{
+
+.hero-text {
     width: 430px;
     height: 330px;
     background-color: white;
@@ -28,4 +31,220 @@
     box-shadow: 0px 0px 30px #ffffff;
     padding: 24px;
     margin-top: 80px;
+}
+
+/* About our app */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 100px;
+}
+
+.first-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 750px;
+    text-align: center;
+}
+
+.secend-part {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+}
+
+
+.our-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 500px;
+    height: 540px;
+    padding: 12px;
+}
+
+.first-option {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    height: 150px;
+    padding: 12px;
+}
+
+.secend-option {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    height: 150px;
+    padding: 12px;
+}
+
+.thired-option {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    height: 150px;
+    padding: 12px;
+}
+
+.titles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.checks {
+    background-color: rgb(80, 80, 241);
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+}
+
+/* Features part */
+
+.Features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 100px;
+    width: 100%;
+    height: 1200px;
+    background-image: url(../images/Background\ Image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.title-of-Features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    width: 750px;
+}
+
+.infos-of-acoount {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.details-of-app {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-left: 40px;
+}
+
+.first-detail-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 270px;
+}
+
+
+.secend-detail-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 270px;
+}
+
+#limit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+#design {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+#versions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+#security{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.Support{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Slide */
+
+.Slide-Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 150px;
+}
+
+.main-slide{
+    width: 90%;
+    height: 500px;
+    border: 2px solid black;
+}
+
+.check-out-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
 }

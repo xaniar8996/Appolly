@@ -30,7 +30,7 @@ export default function NavPage() {
                     sx={{
                         width: "90%",
                         mr: 9,
-                        mt: 4,
+                        mt: 1,
                         borderRadius: "6px",
                         display: "flex",
                         flexDirection: "row",
