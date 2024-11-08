@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { CSSProperties } from "react";
 import { CircularProgress, Typography, AppBar, Toolbar, IconButton, Button, ButtonGroup, Skeleton, Slider } from "@mui/material";
 import Slide from "react-slick";
 // img
@@ -7,6 +7,12 @@ import Logo from "../../assetss/images/Logo4 1.png";
 import Mobile from "../../assetss/images/Free Ui View Mobile App Mockup 1.png";
 import mobileAbout from "../../assetss/images/android-smartphone-free-mockup 1.png";
 import AppFeatures from "../../assetss/images/App.png";
+// Slide
+import FirstSlide from "../../assetss/images/Slide (1).png";
+import SecendSlide from "../../assetss/images/Slide (5).png";
+import TheridSlide from "../../assetss/images/Slide (2).png";
+import FourthSlide from "../../assetss/images/Slide (4).png";
+import FivthSlide from "../../assetss/images/Slide (3).png";
 // icons
 import AppleIcon from '@mui/icons-material/Apple';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
@@ -28,9 +34,8 @@ export default function Home() {
 
     var Settings = {
         dots: true,
-        infinite: true,
         speed: 500,
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1,
     };
 
@@ -51,7 +56,7 @@ export default function Home() {
                         sx={{
                             fontFamily: "fantasy",
                             wordSpacing: "12px",
-                            color: "#5957e9",
+                            color:"#5957e9"
                         }}
                     >
                         A Great App Makes <br />
@@ -292,10 +297,61 @@ export default function Home() {
                         with pages and how to work with it .
                     </Typography>
                 </div>
-                <Slide {...Settings}>
-
-                </Slide>
+                <div
+                    style={{
+                        width: "70%",
+                        marginLeft: "100px",
+                        borderRadius: "15px",
+                        boxShadow:"0px 0px 30px black"
+                    }}
+                >
+                    <Slide 
+                    {...Settings}>
+                        <div>
+                            <img
+                                src={FivthSlide}
+                                style={{
+                                    height: "400px"
+                                }}
+                            />
+                        </div>
+                        <div>
+                            <img
+                                src={TheridSlide}
+                                style={{
+                                    height: "400px"
+                                }}
+                            />
+                        </div>
+                        <div>
+                            <img
+                                src={FirstSlide}
+                                style={{
+                                    height: "400px"
+                                }}
+                            />
+                        </div>
+                        <div>
+                            <img
+                                src={SecendSlide}
+                                style={{
+                                    height: "400px"
+                                }}
+                            />
+                        </div>
+                        <div>
+                            <img
+                                src={FourthSlide}
+                                style={{
+                                    height: "400px"
+                                }}
+                            />
+                        </div>
+                    </Slide>
+                </div>
             </div>
         </>
     )
 }
+
+  

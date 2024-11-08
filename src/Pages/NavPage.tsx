@@ -1,7 +1,7 @@
 
 import React, { lazy, Suspense } from "react";
 import Cookies from "js-cookie";
-import { CircularProgress, Typography, AppBar, Toolbar, IconButton, Button, ButtonGroup, Skeleton } from "@mui/material";
+import { CircularProgress, Typography, AppBar, Toolbar, IconButton, Button, ButtonGroup, Skeleton, colors } from "@mui/material";
 import { Facebook, Instagram, Twitter, YouTube } from "@mui/icons-material"
 // icons
 import AppleIcon from '@mui/icons-material/Apple';
@@ -58,10 +58,10 @@ export default function NavPage() {
                         >
                             Home
                         </Button>
-                        <Button 
-                        variant="text" 
-                        sx={{ color: "black", fontSize: "18px" }}
-                        onClick={() => Navigate("/About-Us")}
+                        <Button
+                            variant="text"
+                            sx={{ color: "black", fontSize: "18px" }}
+                            onClick={() => Navigate("/About-Us")}
                         >
                             About
                         </Button>
@@ -99,7 +99,7 @@ export default function NavPage() {
                     path="*"
                     element={
                         <Suspense fallback={<Loading />}>
-                            <Home />
+                            <Home/>
                         </Suspense>
                     }
                 />
@@ -107,7 +107,7 @@ export default function NavPage() {
                     path="/Home"
                     element={
                         <Suspense fallback={<Loading />}>
-                            <Home />
+                            <Home/>
                         </Suspense>
                     }
                 />
