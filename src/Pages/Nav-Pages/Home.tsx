@@ -34,10 +34,13 @@ export default function Home() {
 
     var Settings = {
         dots: true,
-        speed: 500,
+        speed: 1000,
         slidesToShow: 3,
         slidesToScroll: 1,
-        infinite: false,
+        autoplay: true,
+        infinite: true,
+        autoplaySpeed: 3000,
+        cssEase: "linear"
     };
 
     return (
@@ -306,8 +309,9 @@ export default function Home() {
                 <div
                     style={{
                         width: "70%",
-                        marginLeft: "100px",
+                        marginLeft: "30px",
                         borderRadius: "15px",
+
                     }}
                 >
                     <Slide
@@ -354,6 +358,9 @@ export default function Home() {
                         </div>
                     </Slide>
                 </div>
+            </div>
+            <div className="Download-App-Container">
+
             </div>
         </>
     )
