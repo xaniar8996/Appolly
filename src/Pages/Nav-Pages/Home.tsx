@@ -37,6 +37,7 @@ export default function Home() {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
+        infinite: false,
     };
 
     return (
@@ -56,7 +57,7 @@ export default function Home() {
                         sx={{
                             fontFamily: "fantasy",
                             wordSpacing: "12px",
-                            color:"#5957e9"
+                            color: "#5957e9"
                         }}
                     >
                         A Great App Makes <br />
@@ -95,6 +96,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            {/* About our App */}
             <div className="container">
                 <div className="first-part">
                     <Typography
@@ -115,7 +117,7 @@ export default function Home() {
                     </Typography>
                 </div>
                 <div className="secend-part">
-                    <img src={mobileAbout} />
+                    <img src={mobileAbout} className="mobileAbout" />
                     <div className="our-options">
                         <div className="first-option">
                             <div className="titles">
@@ -185,6 +187,7 @@ export default function Home() {
                     <Typography
                         variant="h4"
                         sx={{ color: "white", fontWeight: "bold", mt: 10 }}
+                        className="title-of-features"
                     >
                         App Features
                     </Typography>
@@ -289,7 +292,10 @@ export default function Home() {
             </div>
             <div className="Slide-Container">
                 <div className="check-out-text">
-                    <Typography variant="h4">
+                    <Typography
+                        variant="h4"
+                        className="Check-out-text"
+                    >
                         Check Out Our App
                     </Typography>
                     <Typography variant="body1">
@@ -302,11 +308,10 @@ export default function Home() {
                         width: "70%",
                         marginLeft: "100px",
                         borderRadius: "15px",
-                        boxShadow:"0px 0px 30px black"
                     }}
                 >
-                    <Slide 
-                    {...Settings}>
+                    <Slide
+                        {...Settings}>
                         <div>
                             <img
                                 src={FivthSlide}
@@ -354,4 +359,3 @@ export default function Home() {
     )
 }
 
-  
