@@ -7,6 +7,8 @@ import Logo from "../../assetss/images/Logo4 1.png";
 import Mobile from "../../assetss/images/Free Ui View Mobile App Mockup 1.png";
 import mobileAbout from "../../assetss/images/android-smartphone-free-mockup 1.png";
 import AppFeatures from "../../assetss/images/App.png";
+import MobileDownload from "../../assetss/images/Gravity-Scene-iPhone-12-Mockup 1.png";
+
 // Slide
 import FirstSlide from "../../assetss/images/Slide (1).png";
 import SecendSlide from "../../assetss/images/Slide (5).png";
@@ -23,12 +25,16 @@ import Version from '../../assetss/Icons/cell-phone.png';
 import Vector from '../../assetss/Icons/vector.png';
 import EyeScanner from '../../assetss/Icons/eye-scanner 1.png';
 import Support from '../../assetss/Icons/male-telemarketer.png';
+import DownloadIcon from '@mui/icons-material/Download';
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import StarIcon from '@mui/icons-material/Star';
 // react slick
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // Style
 import "../../assetss/Style/Home.css";
+
 
 export default function Home() {
 
@@ -45,6 +51,8 @@ export default function Home() {
 
     return (
         <>
+            {/* Hero */}
+
             <div className="hero">
                 <div
                     className="mobile-pic-hero"
@@ -99,7 +107,9 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+
             {/* About our App */}
+
             <div className="container">
                 <div className="first-part">
                     <Typography
@@ -142,7 +152,9 @@ export default function Home() {
                                 and always striving for excellence, creating designs that speak to your unique identity and vision.
                             </Typography>
                         </div>
+
                         {/* scend option */}
+
                         <div className="secend-option">
                             <div className="titles">
                                 <img src={Check} className="checks" />
@@ -185,6 +197,9 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+
+            {/* Features */}
+
             <div className="Features">
                 <div className="title-of-Features">
                     <Typography
@@ -244,6 +259,7 @@ export default function Home() {
                         </div>
                     </div>
                     <img
+                        className="main-image-of-details"
                         src={AppFeatures}
                         style={{
                             height: "500px",
@@ -271,6 +287,9 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+
+                {/* Support */}
+
                 <div className="Support">
                     <img
                         src={Support}
@@ -293,6 +312,9 @@ export default function Home() {
                     </Typography>
                 </div>
             </div>
+
+            {/* Slider */}
+
             <div className="Slide-Container">
                 <div className="check-out-text">
                     <Typography
@@ -307,9 +329,10 @@ export default function Home() {
                     </Typography>
                 </div>
                 <div
+                    className="Slider-container"
                     style={{
                         width: "70%",
-                        marginLeft: "30px",
+                        marginLeft: "50px",
                         borderRadius: "15px",
 
                     }}
@@ -359,8 +382,122 @@ export default function Home() {
                     </Slide>
                 </div>
             </div>
-            <div className="Download-App-Container">
 
+            {/* Download App */}
+
+            <div className="Download-App-Container">
+                <img
+                className="Download-App-image"
+                    style={{
+                        width: "400px",
+                        height: "400px"
+                    }}
+                    src={MobileDownload}
+                />
+                <div className="Download-App-Text">
+                    <div className="Title-of-Download-App-Text">
+                        <Typography
+                            variant="h4"
+                        >
+                            Download App Now
+                        </Typography>
+                        <Typography
+                            variant="body1"
+                        >
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br /> Commodi molestiae optio laborum quis expedita minima et
+                            cumque <br /> natus sint, odit eaque asperiores libero  nihil deserunt ea <br /> similique autem delectus voluptate.
+                        </Typography>
+                    </div>
+                    <div className="Download-App-Btns">
+                        <Button
+                            startIcon={<SportsEsportsIcon />}
+                            sx={{
+                                backgroundColor: "black",
+                                color: "white",
+                                fontSize: "17px",
+                                width: "180px"
+                            }}
+                        >
+                            Google Play
+                        </Button>
+                        <Button
+                            startIcon={<AppleIcon />}
+                            sx={{
+                                backgroundColor: "black",
+                                color: "white",
+                                fontSize: "17px",
+                                width: "180px"
+                            }}
+                        >
+                            App Store
+                        </Button>
+                    </div>
+                    <div className="Download-App-Infos">
+                        <div className="main-download-infos">
+                            <DownloadIcon
+                                sx={{ color: "white", fontSize: "30px" }}
+                            />
+                            <Typography
+                                variant="h6"
+                                sx={{
+                                    color: "white"
+                                }}
+                            >
+                                59865
+                            </Typography>
+                            <Typography
+                                variant="h6"
+                                sx={{
+                                    color: "white"
+                                }}
+                            >
+                                Download
+                            </Typography>
+                        </div>
+                        <div className="main-download-infos">
+                            <ThumbUpIcon
+                                sx={{ color: "white", fontSize: "30px" }}
+                            />
+                            <Typography
+                                variant="h6"
+                                sx={{
+                                    color: "white"
+                                }}
+                            >
+                                29852
+                            </Typography>
+                            <Typography
+                                variant="h6"
+                                sx={{
+                                    color: "white"
+                                }}
+                            >
+                                Like
+                            </Typography>
+                        </div>
+                        <div className="main-download-infos">
+                            <StarIcon
+                                sx={{ color: "white", fontSize: "30px" }}
+                            />
+                            <Typography
+                                variant="h6"
+                                sx={{
+                                    color: "white"
+                                }}
+                            >
+                                1500
+                            </Typography>
+                            <Typography
+                                variant="h6"
+                                sx={{
+                                    color: "white"
+                                }}
+                            >
+                                5 Star Rating
+                            </Typography>
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     )

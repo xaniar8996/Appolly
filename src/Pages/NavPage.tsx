@@ -6,6 +6,7 @@ import { Facebook, Instagram, Twitter, YouTube } from "@mui/icons-material"
 // icons
 import AppleIcon from '@mui/icons-material/Apple';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import SearchIcon from '@mui/icons-material/Search';
 // CSS
 import "../assetss/Style/NavPage.css";
 // image
@@ -34,9 +35,9 @@ export default function NavPage() {
                         borderRadius: "6px",
                         display: "flex",
                         flexDirection: "row",
-                        justifyContent: "flex-start",
-                        alignItems: "flex-start",
-                        gap: "50px",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        gap: "70px",
                         backgroundColor: "white",
                     }}
                 >
@@ -48,9 +49,15 @@ export default function NavPage() {
                             justifyContent: "center",
                             alignItems: "center",
                             gap: "30px",
-                            ml: 15
                         }}
                     >
+                        <IconButton
+                        sx={{
+                            mr:5
+                        }}
+                        >
+                            <SearchIcon />
+                        </IconButton>
                         <Button
                             variant="text"
                             sx={{ color: "black", fontSize: "18px" }}
@@ -88,7 +95,11 @@ export default function NavPage() {
                         <Button variant="text" sx={{ color: "black", fontSize: "18px" }}>
                             Setting
                         </Button>
-                        <Button variant="contained" sx={{ color: "white", fontSize: "18px", ml: 5 }}>
+                        <Button
+                            variant="contained"
+                            sx={{ color: "white", fontSize: "18px", ml: 5 }}
+                            onClick={() => Cookies.remove("user")}
+                        >
                             Download
                         </Button>
                     </Toolbar>
@@ -99,7 +110,7 @@ export default function NavPage() {
                     path="*"
                     element={
                         <Suspense fallback={<Loading />}>
-                            <Home/>
+                            <Home />
                         </Suspense>
                     }
                 />
@@ -107,7 +118,7 @@ export default function NavPage() {
                     path="/Home"
                     element={
                         <Suspense fallback={<Loading />}>
-                            <Home/>
+                            <Home />
                         </Suspense>
                     }
                 />
