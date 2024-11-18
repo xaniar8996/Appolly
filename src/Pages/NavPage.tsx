@@ -1,7 +1,7 @@
 
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useState } from "react";
 import Cookies from "js-cookie";
-import { CircularProgress, Typography, AppBar, Toolbar, IconButton, Button, ButtonGroup, Skeleton, colors } from "@mui/material";
+import { CircularProgress, Typography, AppBar, Toolbar, IconButton, Button, ButtonGroup, Skeleton, colors, useScrollTrigger } from "@mui/material";
 import { Facebook, Instagram, Twitter, YouTube } from "@mui/icons-material"
 // icons
 import AppleIcon from '@mui/icons-material/Apple';
@@ -13,12 +13,16 @@ import "../assetss/Style/NavPage.css";
 import Logo from "../assetss/images/Logo4 1.png";
 import Mobile from "../assetss/images/Free Ui View Mobile App Mockup 1.png";
 import { Route, Routes, useNavigate } from "react-router-dom";
+// Pages
+import SearchBar from "./Nav-Pages/Search-Bar";
 
 
 export default function NavPage() {
 
     const Home = lazy(() => import("./Nav-Pages/Home"));
     const AboutUs = lazy(() => import("./Nav-Pages/About-Us"));
+    const SearchPage = lazy(() => import("./Nav-Pages/Search-Bar"));
+    // usestates
 
     // Navigate
     const Navigate = useNavigate();
@@ -52,9 +56,10 @@ export default function NavPage() {
                         }}
                     >
                         <IconButton
-                        sx={{
-                            mr:5
-                        }}
+                            onClick={() => Navigate("/Search-Bar")}
+                            sx={{
+                                mr: 5
+                            }}
                         >
                             <SearchIcon />
                         </IconButton>
@@ -98,7 +103,6 @@ export default function NavPage() {
                         <Button
                             variant="contained"
                             sx={{ color: "white", fontSize: "18px", ml: 5 }}
-                            onClick={() => Cookies.remove("user")}
                         >
                             Download
                         </Button>
@@ -127,6 +131,17 @@ export default function NavPage() {
                     element={
                         <Suspense fallback={<Loading />}>
                             <AboutUs />
+                        </Suspense>
+                    }
+                />
+
+                {/* Search page */}
+
+                <Route
+                    path="/Search-Bar"
+                    element={
+                        <Suspense fallback={<Loading />}>
+                            <SearchPage />
                         </Suspense>
                     }
                 />

@@ -16,12 +16,12 @@ export default function Login() {
 
     const formik = useFormik({
         initialValues: {
-            username: "",
+            userName: "",
             password: "",
         },
 
         onSubmit: (values) => {
-            axios.post(" https://dummyjson.com/auth/login", values)
+            axios.post(" http://localhost:5000/api/user/login", values)
                 .then((response) => {
                     Cookies.set("user", response.data.jwtToken, {
                         secure: false, sameSite: "Strict"
@@ -95,10 +95,10 @@ export default function Login() {
                         }}
                     >
                         <TextField
-                            label="username"
-                            name="username"
-                            id="username"
-                            value={formik.values.username}
+                            label="userName"
+                            name="userName"
+                            id="userName"
+                            value={formik.values.userName}
                             onChange={formik.handleChange}
                             variant="outlined"
                             sx={{ width: "300px" }}
