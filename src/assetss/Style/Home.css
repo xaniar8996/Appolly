@@ -382,6 +382,8 @@
     gap: 20px;
 }
 
+/* Responsive */
+
 @media screen and (max-width: 480px) {
     .hero {
         display: flex;
@@ -392,14 +394,14 @@
         margin-left: -573px;
         height: 1300px;
     }
-    
-    .hero-text{
+
+    .hero-text {
         width: 330px;
         height: 470px;
         margin-top: 100px;
     }
 
-    .Btn-download-app{
+    .Btn-download-app {
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
@@ -407,34 +409,34 @@
         gap: 20px;
     }
 
-    .first-part{
+    .first-part {
         width: 350px;
     }
 
-    .secend-part{
+    .secend-part {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 100px;
     }
-    
-    .our-options{
+
+    .our-options {
         width: 350px;
     }
 
     /* Features */
 
-    .Features{
+    .Features {
         height: 2100px;
     }
 
-    .title-of-Features{
+    .title-of-Features {
         width: 350px;
         margin-top: -30px;
     }
 
-    .infos-of-acoount{
+    .infos-of-acoount {
         width: 350px;
         margin-left: 50px;
         display: flex;
@@ -445,7 +447,7 @@
         display: none;
     }
 
-    .details-of-app{
+    .details-of-app {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -470,7 +472,7 @@
         gap: 100px;
         margin-left: -50px;
     }
-    
+
     #limit {
         display: flex;
         flex-direction: column;
@@ -504,16 +506,20 @@
         gap: 10px;
     }
 
-    .main-image-of-details{
+    .main-image-of-details {
         margin-left: -50px;
     }
-    
-    .Slider-container{
+
+    /* slider */
+
+    .Slider-container {
         width: 640px;
         margin-right: 50px;
     }
 
-    .Download-App-Container{
+    /* Download-App-Container */
+
+    .Download-App-Container {
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
@@ -522,16 +528,16 @@
         margin-left: -17px;
     }
 
-    .Title-of-Download-App-Text{
+    .Title-of-Download-App-Text {
         width: 350px;
         margin-left: 35px;
     }
 
-    .Download-App-Btns{
+    .Download-App-Btns {
         margin-left: 15px;
     }
 
-    .Download-App-Infos{
+    .Download-App-Infos {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -540,8 +546,143 @@
         margin-left: 125px;
     }
 
-.Download-App-image{
-    margin-left: 10px;
+    .Download-App-image {
+        margin-left: 10px;
+    }
+
+    .WayToUseAppImage{
+        width: 420px;
+    }
+
 }
 
+.the-way-to-use-app {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    width: 100%;
+    height: 400px;
+    background-image: url(../images/Background\ Image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.explanation-of-way-to-use-app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.WayToUseAppImage{
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.Our-Team{
+    margin-top: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    text-align: center;
+}
+
+.employes img{
+    width: 150px;
+    height: 150px;
+}
+
+.employes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    animation: Exployess-animation 3s;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+
+.texts-of-employees{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+}
+
+.social-medias{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.Customers-slider{
+    width: 100%;
+    height: 700px;
+    background-image: url(../images/Background\ Image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.customer-div{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+@keyframes Exployess-animation {
+    from {
+        transform: translateX(-100px);
+        transition: 0.4s ease;
+    }
+
+    to {
+        transform: translateX(0px);
+        transition: 0.4s ease;
+    }
+}
+
+.Blogs-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.blogs-actions:hover{
+    transform: translateY(-5px) ;
+    transition: 0.3s ease;
+    background-color: rgb(80, 80, 241);
+    color: white;
+}
+
+.all-blogs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }

@@ -1,6 +1,6 @@
 
 import React, { CSSProperties } from "react";
-import { CircularProgress, Typography, AppBar, Toolbar, IconButton, Button, ButtonGroup, Skeleton, Slider } from "@mui/material";
+import { CircularProgress, Typography, AppBar, Toolbar, IconButton, Button, ButtonGroup, Skeleton, Slider, Container, Grid2, Card, CardContent, CardMedia, CardActions } from "@mui/material";
 import Slide from "react-slick";
 // img
 import Logo from "../../assetss/images/Logo4 1.png";
@@ -8,7 +8,15 @@ import Mobile from "../../assetss/images/Free Ui View Mobile App Mockup 1.png";
 import mobileAbout from "../../assetss/images/android-smartphone-free-mockup 1.png";
 import AppFeatures from "../../assetss/images/App.png";
 import MobileDownload from "../../assetss/images/Gravity-Scene-iPhone-12-Mockup 1.png";
-
+import WayToUseAppImage from "../../assetss/images/Image.png";
+import FirstEmployee from "../../assetss/images/Profile.png";
+import SecendEmployee from "../../assetss/images/Profile Image.png";
+import TheirdEmployee from "../../assetss/images/Profile Image (1).png";
+import SliderImage from "../../assetss/images/Profile Image (2).png";
+// Blogs images
+import Blog1 from "../../assetss/images/Blogs (1).png";
+import Blog2 from "../../assetss/images/Blogs (2).png";
+import Blog3 from "../../assetss/images/Blogs (3).png";
 // Slide
 import FirstSlide from "../../assetss/images/Slide (1).png";
 import SecendSlide from "../../assetss/images/Slide (5).png";
@@ -28,12 +36,17 @@ import Support from '../../assetss/Icons/male-telemarketer.png';
 import DownloadIcon from '@mui/icons-material/Download';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import StarIcon from '@mui/icons-material/Star';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
 // react slick
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // Style
 import "../../assetss/Style/Home.css";
+import Cookies from "js-cookie";
 
 
 export default function Home() {
@@ -48,6 +61,15 @@ export default function Home() {
         autoplaySpeed: 3000,
         cssEase: "linear"
     };
+
+    var SliderHappy = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    };
+
 
     return (
         <>
@@ -338,7 +360,8 @@ export default function Home() {
                     }}
                 >
                     <Slide
-                        {...Settings}>
+                        {...Settings}
+                    >
                         <div>
                             <img
                                 src={FivthSlide}
@@ -387,7 +410,7 @@ export default function Home() {
 
             <div className="Download-App-Container">
                 <img
-                className="Download-App-image"
+                    className="Download-App-image"
                     style={{
                         width: "400px",
                         height: "400px"
@@ -499,6 +522,431 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+
+            {/* the-way-to-use-app */}
+
+            <Container
+                maxWidth="xl"
+                className="the-way-to-use-app"
+            >
+                <Grid2
+                    container
+                    className="explanation-of-way-to-use-app"
+                >
+                    <Grid2 size={{ xs: 12, xl: 12 }}>
+                        <Typography
+                            variant="h4"
+                            sx={{
+                                color: "white",
+                                mt: 10,
+                                textAlign: "center"
+                            }}
+                        >
+                            How To Use The App Perfectly
+                        </Typography>
+                    </Grid2>
+                    <Grid2 size={{ xs: 12, xl: 12 }}>
+                        <Typography
+                            variant="body1"
+                            sx={{
+                                color: "white",
+                                textAlign: "center"
+                            }}
+                        >
+                            To use the app perfectly, start by exploring its
+                            features <br /> and understanding the interface. Follow any provided tutorials or guides to ensure <br /> you're
+                            utilizing all functionalities efficiently. Regularly check for
+                            updates to enjoy <br /> the latest improvements and features.
+                        </Typography>
+                    </Grid2>
+                    <img
+                        className="WayToUseAppImage"
+                        src={WayToUseAppImage}
+                    />
+                </Grid2>
+            </Container>
+
+            {/* Our Team */}
+
+            <Container
+                maxWidth="xl"
+                className="Our-Team"
+            >
+                <Grid2 container>
+                    <Grid2 size={{ xs: 12, xl: 12 }}>
+                        <Typography
+                            variant="h4"
+                        >
+                            Our reative team
+                        </Typography>
+                    </Grid2>
+                    <Grid2 size={{ xs: 12, xl: 12 }}>
+                        <Typography
+                            variant="body1"
+                        >
+                            Our creative team is a dynamic group of innovators driven by passion and fresh ideas. <br />
+                            We specialize in transforming concepts into impactful solutions,
+                            ensuring every projectstands out. <br /> With diverse
+                            expertise and a collaborative spirit, we bring visions to life with excellence
+                        </Typography>
+                    </Grid2>
+                </Grid2>
+                <Grid2
+                    container
+                    maxWidth="xl"
+                    sx={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        gap: "70px"
+                    }}
+                >
+                    <Grid2 size={{ xs: 12, xl: 3 }}>
+                        <div
+                            className="employes"
+                            id="first-employee"
+                        >
+                            <img
+                                src={FirstEmployee}
+                                style={{
+                                    border: "4px solid blueviolet",
+                                    borderRadius: "100%",
+                                    padding: "4px",
+                                    borderColor: "rgb(80, 80, 241)"
+                                }}
+                            />
+                            <div className="texts-of-employees">
+                                <Typography variant="h6">
+                                    Carla Press
+                                </Typography>
+                                <Typography variant="body1">
+                                    App Developer
+                                </Typography>
+                                <Typography
+                                    variant="body2"
+                                    sx={{
+                                        color: "gray"
+                                    }}
+                                >
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+                                    Viverra nunc ante velit vitae. Est tellus vitae.
+                                </Typography>
+                                <div className="social-medias">
+                                    <FacebookIcon />|
+                                    <InstagramIcon />|
+                                    <TwitterIcon />|
+                                    <YouTubeIcon />
+                                </div>
+                            </div>
+                        </div>
+                    </Grid2>
+                    <Grid2 size={{ xs: 12, xl: 3 }}>
+                        <div
+                            className="employes"
+                            id="secend-employee"
+                        >
+                            <img
+                                src={SecendEmployee}
+                                style={{
+                                    border: "4px solid blueviolet",
+                                    borderRadius: "100%",
+                                    padding: "4px",
+                                    borderColor: "rgb(80, 80, 241)"
+                                }}
+                            />
+                            <div className="texts-of-employees">
+                                <Typography variant="h6">
+                                    Craig Gouse
+                                </Typography>
+                                <Typography variant="body1">
+                                    UI/UX Designer
+                                </Typography>
+                                <Typography
+                                    variant="body2"
+                                    sx={{
+                                        color: "gray"
+                                    }}
+                                >
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+                                    Viverra nunc ante velit vitae. Est tellus vitae.
+                                </Typography>
+                                <div className="social-medias">
+                                    <FacebookIcon />|
+                                    <InstagramIcon />|
+                                    <TwitterIcon />|
+                                    <YouTubeIcon />
+                                </div>
+                            </div>
+                        </div>
+                    </Grid2>
+                    <Grid2 size={{ xs: 12, xl: 3 }}>
+                        <div
+                            className="employes"
+                            id="theird-employee"
+                        >
+                            <img
+                                src={TheirdEmployee}
+                                style={{
+                                    border: "4px solid blueviolet",
+                                    borderRadius: "100%",
+                                    padding: "4px",
+                                    borderColor: "rgb(80, 80, 241)"
+                                }}
+                            />
+                            <div className="texts-of-employees">
+                                <Typography variant="h6">
+                                    Jocelyn Septimus
+                                </Typography>
+                                <Typography variant="body1">
+                                    Website developer
+                                </Typography>
+                                <Typography
+                                    variant="body2"
+                                    sx={{
+                                        color: "gray"
+                                    }}
+                                >
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+                                    Viverra nunc ante velit vitae. Est tellus vitae.
+                                </Typography>
+                                <div className="social-medias">
+                                    <FacebookIcon />|
+                                    <InstagramIcon />|
+                                    <TwitterIcon />|
+                                    <YouTubeIcon />
+                                </div>
+                            </div>
+                        </div>
+                    </Grid2>
+                </Grid2>
+            </Container>
+            <Container
+                maxWidth="xl"
+                className="Customers-slider"
+                sx={{
+                    mt: 20
+                }}
+            >
+                <Grid2 container>
+                    <Grid2 size={{ xs: 12, xl: 12 }} sx={{ mt: 7 }}>
+                        <Typography
+                            variant="h4"
+                            sx={{
+                                color: "white"
+                            }}
+                        >
+                            Our Founder
+                        </Typography>
+                    </Grid2>
+                    <Grid2 size={{ xs: 12, xl: 12 }} sx={{ mt: 7 }}>
+                        <Typography
+                            variant="body1"
+                            sx={{
+                                color: "white"
+                            }}
+                        >
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. <br />
+                            Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus,<br />
+                            ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.
+                        </Typography>
+                    </Grid2>
+                    <Grid2
+                        sx={{
+                            mt: 7,
+                            width: "70%",
+                            ml: 25,
+                        }}
+                    >
+                        <div className="customer-div">
+                            <img src={SliderImage} />
+                            <Typography
+                                variant="h4"
+                                sx={{
+                                    fontWeight: "bold"
+                                }}
+                            >
+                                Ann Lubin
+                            </Typography>
+                            <Typography
+                                variant="body1"
+                                sx={{
+                                    fontWeight: "bold"
+                                }}
+                            >
+                                Co-Founder
+                            </Typography>
+                            <Typography
+                                variant="body2"
+                                sx={{
+                                    fontWeight: "bold",
+                                    color: "gray"
+                                }}
+                            >
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. <br />
+                                Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus,<br />
+                                ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.
+                            </Typography>
+                        </div>
+                    </Grid2>
+                </Grid2>
+            </Container>
+            <Container
+                maxWidth="xl"
+                className="Blogs-container"
+                sx={{
+                    mt: 20,
+                }}
+            >
+                <Grid2 container>
+                    <Grid2 size={{ xs: 12 }}>
+                        <Typography variant="h4">
+                            Our Recent Blogs
+                        </Typography>
+                    </Grid2>
+                    <Grid2 size={{ xs: 12 }} sx={{ mt: 5 }}>
+                        <Typography variant="body1">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. <br />
+                            Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus,<br />
+                            ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.
+                        </Typography>
+                    </Grid2>
+                    <div className="all-blogs">
+                    <Grid2 size={{ xs: 12 }} sx={{ mt: 5 }}>
+                        <Card
+                            sx={{
+                                width: "370px",
+                                height: "500px",
+                                textAlign: "left",
+                            }}
+                        >
+                            <CardMedia
+                                image={Blog1}
+                                component="img"
+                            />
+                            <CardContent
+                                sx={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    gap: "20px"
+                                }}
+                            >
+                                <Typography variant="h6">
+                                    The Snap Pixel: How It Works and How to Install
+                                </Typography>
+                                <Typography variant="body1">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. <br />
+                                    Est tellus vitae, nullam lobortis enim.
+                                </Typography>
+                            </CardContent>
+                            <CardActions>
+                                <Button
+                                    className="blogs-actions"
+                                    variant="text"
+                                    sx={{
+                                        fontSize: "17px",
+                                        color: "blue",
+                                        borderRadius: "10px"
+                                    }}
+                                >
+                                    Read More
+                                </Button>
+                            </CardActions>
+                        </Card>
+                    </Grid2>
+
+                    {/* secend blog */}
+
+                    <Grid2 size={{ xs: 12 }} sx={{ mt: 5 }}>
+                        <Card
+                            sx={{
+                                width: "370px",
+                                height: "500px",
+                                textAlign: "left",
+                            }}
+                        >
+                            <CardMedia
+                                image={Blog2}
+                                component="img"
+                            />
+                            <CardContent
+                                sx={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    gap: "20px"
+                                }}
+                            >
+                                <Typography variant="h6">
+                                    The Snap Pixel: How It Works and How to Install
+                                </Typography>
+                                <Typography variant="body1">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. <br />
+                                    Est tellus vitae, nullam lobortis enim.
+                                </Typography>
+                            </CardContent>
+                            <CardActions>
+                                <Button
+                                    className="blogs-actions"
+                                    variant="text"
+                                    sx={{
+                                        fontSize: "17px",
+                                        color: "blue",
+                                        borderRadius: "10px"
+                                    }}
+                                >
+                                    Read More
+                                </Button>
+                            </CardActions>
+                        </Card>
+                    </Grid2>
+
+                    {/* theird blog */}
+
+                    <Grid2 size={{ xs: 12  , xl:3}} sx={{ mt: 5 }}>
+                        <Card
+                            sx={{
+                                width: "370px",
+                                height: "500px",
+                                textAlign: "left",
+                            }}
+                        >
+                            <CardMedia
+                                image={Blog3}
+                                component="img"
+                            />
+                            <CardContent
+                                sx={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    gap: "20px"
+                                }}
+                            >
+                                <Typography variant="h6">
+                                    The Snap Pixel: How It Works and How to Install
+                                </Typography>
+                                <Typography variant="body1">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. <br />
+                                    Est tellus vitae, nullam lobortis enim.
+                                </Typography>
+                            </CardContent>
+                            <CardActions>
+                                <Button
+                                    className="blogs-actions"
+                                    variant="text"
+                                    sx={{
+                                        fontSize: "17px",
+                                        color: "blue",
+                                        borderRadius: "10px"
+                                    }}
+                                >
+                                    Read More
+                                </Button>
+                            </CardActions>
+                        </Card>
+                    </Grid2>
+                    </div>
+                </Grid2>
+            </Container>
         </>
     )
 }
